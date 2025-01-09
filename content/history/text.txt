@@ -1,0 +1,12 @@
+# 九龙城寨的历史
+
+<section>
+在1842年，英国殖民政府接管香港岛后，清政府为了加强防御，在九龙半岛修建了这座城寨。
+
+<image position="right">
+file: history/map1.jpg
+caption: 清代九龙城寨的地图（1898年）
+</image>
+
+这座城寨最初是作为军事要塞而建，但随着时间推移...
+</section> 

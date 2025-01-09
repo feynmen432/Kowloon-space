@@ -1,0 +1,723 @@
+/* 全局样式 */
+:root {
+  --primary-bg: #1a1a1a;
+  --text-color: #f0d6a7;
+  --accent-color: #ffd700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: "Source Han Serif TC", "Noto Serif TC", serif;
+}
+
+/* 背景纹理叠加层 */
+.texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/textures/concrete.png');
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 封面页样式 */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 顶部导航区域 */
+.hero-nav {
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+/* 进入空间按钮 */
+.enter-space-btn {
+  padding: 0.8rem 2.5rem;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enter-space-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 社交图标 */
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon path {
+  fill: #000;
+}
+
+/* 底部标题 */
+.hero-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.book-title {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* 主页面样式 */
+.main-content {
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.main-content.visible {
+}
+
+/* 主页面头部样式 */
+.main-header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: none;
+}
+
+/* 头部内容容器 */
+.header-content {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* 移除不需要的 header-banner */
+.header-banner {
+    display: none;
+}
+
+/* 标题样式 */
+.site-title {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 2rem;
+}
+
+/* 导航栏样式 */
+.main-nav {
+    padding: 0.8rem 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* 悬停效果 */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+    background-color: var(--accent-color);
+}
+
+/* 当前活动页面的样式 */
+.main-nav a.active {
+    color: var(--accent-color);
+}
+
+.main-nav a.active::after {
+    width: 100%;
+    background-color: var(--accent-color);
+}
+
+/* 内容区域样式 */
+.content-wrapper {
+    background-color: var(--primary-bg);
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 锚点偏移 */
+html {
+    scroll-padding-top: 120px;
+    scroll-behavior: smooth;
+}
+
+/* 印象集部分样式 */
+.section-impressions {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 0.5rem 0 1.5rem 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.impressions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 两列布局 */
+    gap: 2rem;  /* 图片之间的间距 */
+    margin-bottom: 3rem;  /* 横图和竖图区域之间的间距 */
+}
+
+.impression-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 图片样式 */
+.impression-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 横图特定样式 */
+.impressions-grid.horizontal .impression-item {
+    aspect-ratio: 16/9;  /* 横图比例 */
+}
+
+/* 竖图部分的网格布局 */
+.impressions-grid.vertical {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 改回两列 */
+    gap: 2rem;
+}
+
+/* 图片包装器样式 */
+.impressions-grid.vertical .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 竖图容器样式 */
+.impressions-grid.vertical .impression-item {
+    aspect-ratio: 2/3;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 竖图样式 */
+.impressions-grid.vertical .impression-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 描述文字样式 */
+.impressions-grid.vertical .image-description {
+    padding: 0.8rem 0;
+}
+
+.impressions-grid.vertical .image-description p {
+    text-align: center;
+    margin: 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .impressions-grid {
+        grid-template-columns: 1fr;  /* 在移动设备上改为单列 */
+    }
+}
+
+.impression-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.page-header {
+    width: 100%;
+    height: 200px;
+    background-image: url('../banner/banner4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 横图轮播样式 */
+.horizontal-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-btn.prev {
+    left: 1rem;
+}
+
+.slider-btn.next {
+    right: 1rem;
+}
+
+/* 竖图描述文字样式 */
+.impressions-grid.vertical .image-description {
+    padding: 0.8rem 0;
+    background: var(--primary-bg);
+}
+
+.impressions-grid.vertical .image-description p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* 影像记录部分样式 */
+.section-videos {
+    padding: 2rem;
+    margin-top: 2rem;
+    background: var(--primary-bg);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 历史部分样式 */
+.section-history {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 1rem 0 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.history-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 历史和社会页面共用的文本样式 */
+.text-block {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.image-block {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-block img {
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 较大图片的样式 */
+.image-block img.large-image {
+    max-height: 700px;  /* 只增加最大高度，保持原始比例 */
+}
+
+.image-caption {
+    max-width: 600px;  /* 限制说明文字宽度 */
+    text-align: center;
+    color: var(--text-color);
+    font-style: italic;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* 社会页面的格式 */
+.section-society {
+    padding: 2rem;
+    max-width: 1000px;  /* 与历史页面保持一致 */
+    margin: 0 auto;
+}
+
+.society-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 社会页面的图片样式 */
+.section-society .image-block img {
+    width: auto;
+    max-width: 100%;
+    max-height: 650px;  /* 比默认的 500px 增加 30% */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-society .image-block img.large-image {
+    max-height: 910px;  /* 比默认的 700px 增加 30% */
+}
+
+/* 人物志页面的格式 */
+.section-people {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.people-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.enlarged-image {
+    transform: scale(1.3);
+    transform-origin: center center;
+    margin: 7.5% 0;  /* 将间距缩短到原来的50% */
+}
+
+.signature {
+    margin-top: 4rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.signature .quote {
+    font-style: italic;
+    color: rgba(240, 214, 167, 0.8);
+    font-size: 1.1rem;
+    transform: rotate(-3deg);  /* 稍微倾斜一点 */
+    display: inline-block;
+}
+
+/* 关于页面的格式 */
+.section-about {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 只将关于页面的正文内容设置为简体字 */
+.section-about .about-content {
+    font-family: "SimSun", "宋体", "Songti SC", serif;
+    font-weight: 400;
+}
+
+/* 文本块的间距设置 */
+.section-about .text-block {
+    line-height: 1.1;  /* 进一步减小行高 */
+    margin-bottom: 4rem;  /* 增加块与块之间的间距 */
+}
+
+/* 段落的间距设置 */
+.section-about .text-block p {
+    margin-bottom: 0.2rem;  /* 进一步减小段落间距 */
+}
+
+/* 标题与内容的间距 */
+.section-about h3 {
+    margin-top: 4rem;  /* 增加标题与上方内容的间距 */
+    margin-bottom: 1rem;  /* 标题与下方内容的间距 */
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+/* 第一个标题不需要顶部间距 */
+.section-about h3:first-of-type {
+    margin-top: 1rem;
+}
+
+/* 最后一个文本块不需要底部间距 */
+.section-about .text-block:last-of-type {
+    margin-bottom: 0;
+}
+
+/* 英文引言保持原字体 */
+.section-about .signature .quote {
+    font-family: var(--base-font-family);
+    font-style: italic;
+    color: rgba(240, 214, 167, 0.8);
+    transform: rotate(-3deg);
+    display: inline-block;
+}
+
+/* 联系方式链接样式 */
+.section-about .contact-list a {
+    color: #fb7299;  /* bilibili 的品牌色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section-about .contact-list a:hover {
+    color: #fc9ebb;  /* 鼠标悬停时颜色变浅 */
+    text-decoration: underline;
+}
+
+/* 音乐播放器样式 */
+.music-player {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    height: 24px;
+    padding: 0 0.8rem;
+    background: rgba(26, 26, 26, 0.4);
+    border-radius: 12px;
+}
+
+.play-btn {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    padding: 0;
+}
+
+.progress-bar {
+    width: 80px;
+    height: 2px;
+    background: rgba(240, 214, 167, 0.2);
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--text-color);
+    width: 0;
+}
+
+.time-display {
+    color: var(--text-color);
+    font-size: 0.7rem;
+    min-width: 40px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.video-overlay::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 50px;
+    height: 50px;
+    pointer-events: auto;
+} 

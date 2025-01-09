@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九龍城寨</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- 主页面 -->
+    <main id="main-content" class="main-content hidden">
+        <!-- 头部导航 -->
+        <header class="page-header">
+            <div class="header-content">
+                <h1 class="site-title">九龍城寨歲月</h1>
+                <nav class="main-nav">
+                    <!-- 音乐播放器 -->
+                    <div class="music-player">
+                        <audio id="bgMusic" src="music/%E5%A4%A9%E6%89%8D%E7%99%BD%E7%97%B4%E6%A2%A6-%E8%AE%B8%E5%86%A0%E6%9D%B0.mp3"></audio>
+                        <button class="play-btn">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="time-display">00:00</span>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="home-link">主頁</a></li>
+                        <li><a href="impression.html" class="active">印象集</a></li>
+                        <li><a href="video.html">影像記錄</a></li>
+                        <li><a href="history.html">歷史</a></li>
+                        <li><a href="society.html">社會</a></li>
+                        <li><a href="people.html">人物志</a></li>
+                        <li><a href="architecture.html">建築</a></li>
+                        <li><a href="about.html">關於</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 内容区域 -->
+        <div class="content-wrapper">
+            <section id="impressions" class="section-impressions">
+                <h2 class="section-title">印象集</h2>
+                <!-- 横图部分 -->
+                <div class="horizontal-slider">
+                    <button class="slider-btn prev">❮</button>
+                    <div class="slider-container">
+                        <img src="impression/横图/1.jpg" alt="九龙城寨横图1" class="active">
+                        <img src="impression/横图/2.jpg" alt="九龙城寨横图2">
+                        <img src="impression/横图/3.jpg" alt="九龙城寨横图3">
+                        <img src="impression/横图/4.jpg" alt="九龙城寨横图4">
+                        <img src="impression/横图/5.jpg" alt="九龙城寨横图5">
+                        <img src="impression/横图/6.jpg" alt="九龙城寨横图6">
+                        <img src="impression/横图/7.jpg" alt="九龙城寨横图7">
+                        <img src="impression/横图/8.jpg" alt="九龙城寨横图8">
+                        <img src="impression/横图/9.jpg" alt="九龙城寨横图9">
+                        <img src="impression/横图/10.jpg" alt="九龙城寨横图10">
+                    </div>
+                    <button class="slider-btn next">❯</button>
+                </div>
+                
+                <!-- 竖图部分 -->
+                <div class="impressions-grid vertical">
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/1.jpg" alt="九龙城寨竖图1">
+                        </div>
+                        <div class="image-description">
+                            <p>黄昏下的城寨</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/2.jpg" alt="九龙城寨竖图2">
+                        </div>
+                        <div class="image-description">
+                            <p>密集的居民楼紧挨在一起</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/3.jpg" alt="九龙城寨竖图3">
+                        </div>
+                        <div class="image-description">
+                            <p>昏暗的巷道</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/4.jpg" alt="九龙城寨竖图4">
+                        </div>
+                        <div class="image-description">
+                            <p>从此下去可进入城寨的内部</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/5.jpg" alt="九龙城寨竖图5">
+                        </div>
+                        <div class="image-description">
+                            <p>脏污的路面</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/6.jpg" alt="九龙城寨竖图6">
+                        </div>
+                        <div class="image-description">
+                            <p>热闹的城寨外部街道与紫色的天空</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/7.jpg" alt="九龙城寨竖图7">
+                        </div>
+                        <div class="image-description">
+                            <p>建筑内的空间随意交错</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <div class="impression-item">
+                            <img src="impression/竖图/8.jpg" alt="九龙城寨竖图8">
+                        </div>
+                        <div class="image-description">
+                            <p>居民楼内的邮箱不规则地布局在墙上</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts/player.js"></script>
+    <script src="scripts/impression.js"></script>
+</body>
+</html> 

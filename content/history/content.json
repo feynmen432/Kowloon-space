@@ -1,0 +1,18 @@
+{
+  "sections": [
+    {
+      "type": "text",
+      "content": "在1842年，英国殖民政府..."
+    },
+    {
+      "type": "image",
+      "src": "history/map1.jpg",
+      "caption": "清代九龙城寨地图",
+      "position": "right"
+    },
+    {
+      "type": "text",
+      "content": "随后在1898年，清政府与英国签订..."
+    }
+  ]
+} 

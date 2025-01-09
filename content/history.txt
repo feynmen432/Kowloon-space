@@ -1,0 +1,9 @@
+[section]
+九龙城寨的历史可以追溯到宋代...
+
+[image]
+history/old-map.jpg
+图片说明：清代九龙城寨的地图
+
+[section]
+到了清朝时期，城寨成为了... 

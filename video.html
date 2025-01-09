@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九龍城寨</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- 主页面 -->
+    <main id="main-content" class="main-content hidden">
+        <!-- 头部导航 -->
+        <header class="page-header">
+            <div class="header-content">
+                <h1 class="site-title">九龍城寨歲月</h1>
+                <nav class="main-nav">
+                    <!-- 音乐播放器 -->
+                    <div class="music-player">
+                        <audio id="bgMusic" src="music/%E5%A4%A9%E6%89%8D%E7%99%BD%E7%97%B4%E6%A2%A6-%E8%AE%B8%E5%86%A0%E6%9D%B0.mp3"></audio>
+                        <button class="play-btn">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="time-display">00:00</span>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="home-link">主頁</a></li>
+                        <li><a href="impression.html">印象集</a></li>
+                        <li><a href="video.html" class="active">影像記錄</a></li>
+                        <li><a href="history.html">歷史</a></li>
+                        <li><a href="society.html">社會</a></li>
+                        <li><a href="people.html">人物志</a></li>
+                        <li><a href="architecture.html">建築</a></li>
+                        <li><a href="about.html">關於</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 内容区域 -->
+        <div class="content-wrapper">
+            <section id="videos" class="section-videos">
+                <h2 class="section-title">影像記錄</h2>
+                <div class="video-container">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=BV1Lu41117jo&page=1&as_wide=1&high_quality=1&danmaku=0&autoplay=1&mute=1&t=0&player_type=1&disable_web=1&disable_jump=1"
+                            scrolling="no" 
+                            border="0" 
+                            frameborder="no" 
+                            framespacing="0"
+                            allowfullscreen="true"
+                            style="width: 100%; height: 500px;"
+                            >
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts/player.js"></script>
+    <script src="scripts/video.js"></script>
+</body>
+</html> 
